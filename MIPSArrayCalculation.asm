@@ -69,7 +69,9 @@ end_loop:
     move $a0, $a2   # Move the value in $a2 to $a0
     syscall
 
-
+    # Exit the program
+    li $v0, 10           # System call code for exit
+    syscall              # Make the system call to exit
 
 
 
