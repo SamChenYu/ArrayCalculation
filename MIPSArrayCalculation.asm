@@ -49,13 +49,13 @@ loop:
 check_odd:
     div $t1, $s2                # divide $a3 by 2
     mfhi $t2                    # load the remainder into register $t2
-    bne $s1, $t2 loop
+    bne $s1, $t2, loop
     j check_congruency
 
 check_congruency:
     div $t1, $s4                # divide $a3 by 2
     mfhi $t3                    # load the remainder into register $t3
-    bne $s1, $t3 loop
+    bne $s1, $t3, loop
     j add_sum
 
 add_sum:
